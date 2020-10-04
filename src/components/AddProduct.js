@@ -17,6 +17,7 @@ function AddProduct() {
     }
     const onSubmitForm = (e) => {
         e.preventDefault();
+        if(product.name==="" || product.price===0) return;
         product.id=parseInt(Math.random()*1000);
         dispatch(addProduct(product));
     }
